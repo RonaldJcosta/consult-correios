@@ -1,0 +1,93 @@
+openapi: 3.0.0
+info:
+  description: consuming mail api
+  version: 1.0.0
+  title: Mail api
+  contact:
+    email: ronald.jc@hotmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+paths:
+  "/busca/{cep}":
+    get:
+      tags:
+        - consult
+      summary: return an address
+      operationId: getAddress
+      description: return an address
+      parameters:
+        - name: cep
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: "[0-9]{5}-[0-9]{3}"
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Address"
+        "400":
+          description: Invalid Id
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                response:
+                  value:
+                    message: Id Formated Invalid
+        "404":
+          description: Employee not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                response:
+                  value:
+                    message: Not found
+        "500":
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                response:
+                  value:
+                    message: Internal Server Error
+servers:
+  - url: https://localhost:8080/busca/v1
+  - url: http://localhost:8080/busca/v1
+components:
+  schemas:
+    Address:
+      type: object
+      properties:
+        bairro:
+          type: string
+        cep:
+          type: string
+        cidade:
+          type: string
+        complemento2:
+          type: string
+        end:
+          type: string
+        uf:
+          type: string
+      example:
+        bairro: Belo comeco
+        cep: "12345678"
+        cidade: Belo fim
+        complemento: Casa
+        endereco: Rua dos Abc
+        uf: Mg
+    Error:
+      properties:
+        message:
+          type: string

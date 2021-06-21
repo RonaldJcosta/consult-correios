@@ -1,0 +1,4 @@
+br/com/ronald/model/Error.class
+br/com/ronald/model/Address.class
+br/com/ronald/api/BuscaApi.class
+br/com/ronald/handler/RestApplication.class
