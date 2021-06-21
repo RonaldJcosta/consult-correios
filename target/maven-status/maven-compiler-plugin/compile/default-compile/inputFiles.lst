@@ -26,6 +26,7 @@
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/PesquisarDimensoesServico.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/BuscaServicosAdicionaisAtivos.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ObterClienteAtualizacaoResponse.java
+/home/ronald/eclipse-workspace/correios/src/main/java/br/com/ronald/handler/ErrorHandler.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/CalculaTarifaServicoResponse.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/PreListaPostagem.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/ronald/handler/RestApplication.java
@@ -45,6 +46,7 @@
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/SigepClienteException.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/SolicitaPLP.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/Acao.java
+/home/ronald/eclipse-workspace/correios/src/main/java/br/com/ronald/controllers/CepController.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/StatusGerente.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/IntegrarUsuarioScolResponse.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/BuscaPagamentoEntrega.java
@@ -79,7 +81,6 @@
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/BuscaCliente.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ColetaSimultanea.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ServicoAdicionalTO.java
-/home/ronald/eclipse-workspace/correios/src/main/java/br/com/ronald/model/Error.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/FechaPlpVariosServicos.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/VerificaDisponibilidadeServicoResponse.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/CartaoPostagemERP.java
@@ -97,6 +98,7 @@
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ErroMontagemRelatorio_Exception.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/VerificaDisponibilidadeServico.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/BuscaServicosXServicosAdicionaisResponse.java
+/home/ronald/eclipse-workspace/correios/src/main/java/br/com/ronald/services/CepService.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/SolicitaXmlPlpResponse.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ValidarPostagemSimultaneaResponse.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/Objeto.java
@@ -121,6 +123,7 @@
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ServicoERP.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/AtualizaPagamentoNaEntregaResponse.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/ronald/model/Address.java
+/home/ronald/eclipse-workspace/correios/src/main/java/br/com/ronald/CepCliente/ConnectionApi.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/VerificaSeTodosObjetosCanceladosResponse.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/AtendeCliente.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/EnderecoERP.java
@@ -133,6 +136,7 @@
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ValidarPostagemSimultanea.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/Exception_Exception.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ValidaPlp.java
+/home/ronald/eclipse-workspace/correios/src/main/java/br/com/ronald/model/ErrorModel.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/UnidadePostagemERP.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ChancelaMaster.java
 /home/ronald/eclipse-workspace/correios/src/main/java/br/com/correios/bsb/sigep/master/bean/cliente/ServicoAdicionalERP.java

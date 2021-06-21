@@ -39,7 +39,7 @@ paths:
               examples:
                 response:
                   value:
-                    message: Id Formated Invalid
+                    message: cep Formated Invalid
         "404":
           description: Employee not found
           content:
@@ -49,7 +49,7 @@ paths:
               examples:
                 response:
                   value:
-                    message: Not found
+                    message: Address Not found
         "500":
           description: Server Error
           content:
@@ -80,6 +80,11 @@ components:
           type: string
         uf:
           type: string
+        unidadesPostagem:
+          type: array
+          items: 
+            $ref: "#/components/schemas/UnidadePostagemERP"
+          
       example:
         bairro: Belo comeco
         cep: "12345678"
@@ -91,3 +96,21 @@ components:
       properties:
         message:
           type: string
+          
+    UnidadePostagemERP:
+      type: "object"
+      properties:
+        diretoriaRegional:
+          type: "string"
+        id:
+          type: "string"
+        nome:
+          type: "string"
+        status:
+          type: "string"
+        tipo:
+          type: "string"
+        endereco:
+          type: "object"
+          allOf:
+            - $ref: "#/components/schemas/Address"      

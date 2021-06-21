@@ -13,13 +13,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2021-06-18T14:03:56.588-03:00[America/Sao_Paulo]")public class Error   {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2021-06-18T14:03:56.588-03:00[America/Sao_Paulo]")public class ErrorModel   {
   
   private @Valid String message;
 
   /**
    **/
-  public Error (String message) {
+  public ErrorModel (String message) {
 	  super();
 	  this.message = message;
   }
@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Error error = (Error) o;
+    ErrorModel error = (ErrorModel) o;
     return Objects.equals(this.message, error.message);
   }
 
