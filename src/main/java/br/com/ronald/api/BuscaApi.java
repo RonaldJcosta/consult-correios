@@ -7,6 +7,7 @@ import javax.ws.rs.core.Response;
 
 import br.com.ronald.controllers.CepController;
 import br.com.ronald.model.Address;
+import br.com.ronald.model.ErrorModel;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -21,9 +22,9 @@ import io.swagger.annotations.ApiResponses;
     @ApiOperation(value = "return an address", notes = "return an address", response = Address.class, tags={ "consult" })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "successful operation", response = Address.class),
-        @ApiResponse(code = 400, message = "cep Formated Invalid", response = Error.class),
-        @ApiResponse(code = 404, message = "Address not found", response = Error.class),
-        @ApiResponse(code = 500, message = "Server Error", response = Error.class)
+        @ApiResponse(code = 400, message = "cep Formated Invalid", response = ErrorModel.class),
+        @ApiResponse(code = 404, message = "Address not found", response = ErrorModel.class),
+        @ApiResponse(code = 500, message = "Server Error", response = ErrorModel.class)
     })
     public Response getAddress(@PathParam("cep") String cep) {
     	CepController cepController = new CepController();
