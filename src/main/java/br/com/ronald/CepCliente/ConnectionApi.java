@@ -8,10 +8,10 @@ public class ConnectionApi {
 	public AtendeCliente makeclient() {
 		
 		AtendeClienteService service = new AtendeClienteService();
-    	AtendeCliente cliente = service.getAtendeClientePort();
+    	AtendeCliente client = service.getAtendeClientePort();
     	
     	
-    	return cliente;
+    	return client;
 		
 	}
 	

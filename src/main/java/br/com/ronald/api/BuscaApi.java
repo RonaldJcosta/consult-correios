@@ -4,7 +4,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
-
 import br.com.ronald.controllers.CepController;
 import br.com.ronald.model.Address;
 import br.com.ronald.model.ErrorModel;
@@ -15,7 +14,8 @@ import io.swagger.annotations.ApiResponses;
 
 @Path("/busca/{cep}")
 @Api(description = "the busca API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2021-06-18T14:03:56.588-03:00[America/Sao_Paulo]")public class BuscaApi {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2021-06-18T14:03:56.588-03:00[America/Sao_Paulo]")
+public class BuscaApi {
 
     @GET
     @Produces({ "application/json" })

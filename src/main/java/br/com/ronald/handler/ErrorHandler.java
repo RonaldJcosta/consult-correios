@@ -12,23 +12,30 @@ public class ErrorHandler {
 	private CepService cepService = new CepService();
 	
 	public Response getResponse(String cep) {
-		
-		if(!cep.matches("\\d{5}-?\\d{3}"))
-			return Response.status(400).entity(new ErrorModel("cep Formated Invalid")).build();
+		Response response = null;
+				
+		if(!cep.matches("\\d{5}-\\d{3}")) 
+			response = Response.status(400).entity(new ErrorModel("cep Formated Invalid")).build();
 		
 		try {
 			
 			EnderecoERP endereco = cepService.consulta(cep);
-			return Response.ok().entity(endereco).build();
+			response = Response.ok().entity(endereco).build();
+			
 		} catch (SQLException_Exception e) {
 			e.printStackTrace();
-			return Response.status(500).entity(new ErrorModel("Server Error")).build();
+			response =  Response.status(500).entity(new ErrorModel("Server Error")).build();
+			
 		} catch (SigepClienteException e) {
 			
-			return Response.status(404).entity(new ErrorModel("Address not found")).build();
+			response =  Response.status(404).entity(new ErrorModel("Address not found")).build();
+			
 		} catch(Exception e) {
-			return Response.status(500).entity(new ErrorModel("Server Internal Error")).build();
+			
+			response =  Response.status(500).entity(new ErrorModel("Server Internal Error")).build();
 		}
+		
+		return response;
 		
 	}
 	

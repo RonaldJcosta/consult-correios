@@ -10,7 +10,7 @@ public class CepService {
 	public EnderecoERP consulta(String cep) throws SQLException_Exception, SigepClienteException {
 		
 		ConnectionApi connection = new ConnectionApi();
-		AtendeCliente client   = connection.makeclient();
+		AtendeCliente client = connection.makeclient();
 		
 		return client.consultaCEP(cep);
 	}
