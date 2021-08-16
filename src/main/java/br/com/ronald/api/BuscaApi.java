@@ -29,7 +29,7 @@ public class BuscaApi {
     public Response getAddress(@PathParam("cep") String cep) {
     	CepController cepController = new CepController();
     	
-		return cepController.root_getRequest(cep);
+		  return cepController.root_getRequest(cep);
     	
     }
 }
