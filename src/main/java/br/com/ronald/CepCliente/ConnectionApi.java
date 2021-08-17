@@ -1,5 +1,4 @@
 package br.com.ronald.CepCliente;
-
 import br.com.correios.bsb.sigep.master.bean.cliente.AtendeCliente;
 import br.com.correios.bsb.sigep.master.bean.cliente.AtendeClienteService;
 
